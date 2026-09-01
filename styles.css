@@ -272,6 +272,21 @@ p {
   color: var(--muted);
 }
 
+.project-screenshot {
+  display: block;
+  margin-top: 24px;
+  border: 1px solid var(--line);
+  background: #fff;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.project-screenshot img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .tags {
   display: flex;
   flex-wrap: wrap;

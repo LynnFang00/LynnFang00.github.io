@@ -3,45 +3,102 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Lynn | Portfolio</title>
-    <link rel="stylesheet" href="styles.css?v=20260614">
+    <meta name="description" content="Yanlin (Lynn) Fang builds evaluated AI systems, recommender products, and thoughtful full-stack tools.">
+    <meta name="theme-color" content="#f4f2ed">
+    <meta property="og:title" content="Yanlin (Lynn) Fang | ML systems &amp; product engineering">
+    <meta property="og:description" content="Selected work across recommender systems, continuous sensor interfaces, AI products, and research.">
+    <title>Yanlin (Lynn) Fang | ML systems &amp; product engineering</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%2312231f%22/><text x=%2250%22 y=%2267%22 text-anchor=%22middle%22 font-size=%2252%22 fill=%22%23fbfaf6%22 font-family=%22Georgia%22>LF</text></svg>">
+    <link rel="stylesheet" href="portfolio-v2.css?v=20260827">
+    <script src="script.js?v=20260827" defer></script>
   </head>
-  <body>
-    <header class="site-header">
-      <nav class="site-shell nav" aria-label="Main navigation">
-        <a class="brand" href="index.html">Lynn</a>
-        <div class="nav-links">
-          <a href="about.html">About</a>
-          <a href="projects.html">Projects</a>
-          <a href="resume.html">Skills</a>
-          <a href="contact.html">Contact</a>
-        </div>
+  <body class="portfolio-v2">
+    <a class="pf-skip" href="#main-content">Skip to content</a>
+    <header class="pf-header">
+      <nav class="pf-shell pf-nav" aria-label="Main navigation">
+        <a class="pf-brand" href="#top" aria-label="Yanlin Fang, home"><b>LF</b><span>Yanlin <i>/ Lynn</i> Fang</span></a>
+        <button class="pf-menu" type="button" aria-expanded="false" aria-controls="pf-links" aria-label="Open navigation"><span></span><span></span></button>
+        <div class="pf-links" id="pf-links"><a href="#work">Work</a><a href="#approach">Approach</a><a href="#about">About</a><a href="#contact">Contact</a></div>
       </nav>
     </header>
 
-    <main class="site-shell hero">
-      <section>
-        <p class="eyebrow">Portfolio</p>
-        <h1>Hi, I'm Lynn.</h1>
-        <p class="lead">
-          I am a Computer Science student at the University of Toronto interested in software
-          engineering, machine learning, and AI-powered tools. I like building practical full-stack
-          systems, including search and recommender products that turn complex data into usable
-          workflows.
-        </p>
-        <div class="hero-actions">
-          <a class="button primary" href="projects.html">View Projects</a>
-          <a class="button" href="resume.html">Skills</a>
+    <main id="main-content">
+      <section class="pf-shell pf-hero" id="top">
+        <div class="pf-hero-copy pf-reveal">
+          <p class="pf-kicker"><span></span> Computer Science at the University of Toronto</p>
+          <h1>I build AI systems that <em>earn</em> their complexity.</h1>
+          <p class="pf-lead">I&apos;m Yanlin (Lynn) Fang. I work across ML evaluation, backend systems, and product interfaces to turn ambitious ideas into tools people can use—and conclusions engineers can trust.</p>
+          <div class="pf-actions"><a class="pf-button pf-primary" href="#work">Explore selected work</a><a class="pf-button" href="https://github.com/LynnFang00" target="_blank" rel="noreferrer">GitHub ↗</a></div>
         </div>
+        <aside class="pf-portrait pf-reveal">
+          <div class="pf-photo-wrap"><img src="assets/headshot.png" alt="Yanlin (Lynn) Fang" width="1254" height="1254"><div><strong>Yanlin (Lynn) Fang</strong><span>Builder · researcher · violinist</span></div></div>
+        </aside>
       </section>
 
-      <aside class="portrait-panel" aria-label="Portrait of Lynn">
-        <img class="portrait-image" src="assets/headshot.png" alt="Lynn Fang">
-      </aside>
+      <section class="pf-shell pf-section" id="work">
+        <header class="pf-section-head pf-reveal"><div><p>Selected work</p><h2>Proof, not just project names.</h2></div><span>My favorite projects connect a careful technical question to a complete, inspectable product or experiment.</span></header>
+
+        <div class="pf-work">
+          <article class="pf-project pf-reveal">
+            <div class="pf-project-copy">
+              <p class="pf-index">01 / Recommender systems</p><h3>ResearchPath</h3>
+              <p class="pf-summary">A local-first research recommender that turns an open-ended topic into a staged, beginner-aware reading path—not another flat results page.</p>
+              <ul><li><b>50k-paper corpus</b> from arXiv and OpenAlex pipelines</li><li><b>Multiple retrieval paths</b> across BM25, TF-IDF, embeddings, FAISS, and learned ranking</li><li><b>Evaluation-gated decisions</b> that keep uncertain rankers opt-in</li><li><b>Full product loop</b> with profiles, feedback, explanations, API, and database</li></ul>
+              <div class="pf-tags"><span>React + TypeScript</span><span>FastAPI</span><span>PostgreSQL</span><span>Ranking evaluation</span></div>
+              <a class="pf-project-link" href="https://github.com/LynnFang00/ResearchPath" target="_blank" rel="noreferrer">View repository ↗</a>
+            </div>
+            <div class="pf-visual pf-rp-visual">
+              <a class="pf-rp-shot" href="https://github.com/LynnFang00/ResearchPath" target="_blank" rel="noreferrer" aria-label="View the ResearchPath repository">
+                <img src="assets/screenshots/researchpath-reading-path.png" alt="ResearchPath interface showing a staged reading path for machine learning in scientific discovery" width="2538" height="1234">
+              </a>
+            </div>
+          </article>
+
+          <article class="pf-project pf-project-dark pf-reveal">
+            <div class="pf-project-copy">
+              <p class="pf-index">02 / Multimodal ML</p><h3>Continuous sensor context for a frozen LLM</h3>
+              <p class="pf-summary">Can a complete inertial-sensor window become one continuous context vector inside a frozen language model—without converting values into text?</p>
+              <div class="pf-results"><div><span>Direct</span><b>0.8921</b><small>macro-F1</small></div><div><span>Context</span><b>0.8990</b><small>macro-F1</small></div><div><span>Shuffled</span><b>0.1688</b><small>macro-F1</small></div></div>
+              <p class="pf-insight">The <b>0.7302</b> shuffled-control drop showed that the model used the matching sensor embedding. The honest conclusion: the interface works, but the direct classifier remains the better HAR product.</p>
+              <div class="pf-tags"><span>PyTorch</span><span>SmolLM2</span><span>Frozen backbone</span><span>Subject-held-out evaluation</span></div>
+              <div class="pf-link-row"><a class="pf-project-link" href="https://github.com/LynnFang00/llm-motion-sensor-challenge" target="_blank" rel="noreferrer">View experiment ↗</a><a href="https://github.com/LynnFang00/llm-motion-sensor-challenge/blob/main/TECHNICAL_NOTE.pdf" target="_blank" rel="noreferrer">Technical note</a></div>
+            </div>
+            <div class="pf-visual pf-sensor-visual" aria-hidden="true"><div class="pf-wave"><span>128 × 9 inertial window</span><svg viewBox="0 0 520 170"><path d="M0 88 C30 28 55 148 89 79 S145 18 172 92 S220 150 250 70 S305 18 334 88 S393 147 420 73 S478 30 520 88"></path><path d="M0 102 C44 138 60 48 101 99 S165 142 202 82 S276 54 310 103 S376 128 407 79 S473 55 520 103"></path><path d="M0 72 C35 91 63 41 104 75 S170 114 211 64 S278 91 318 69 S391 102 431 60 S492 76 520 63"></path></svg></div><div class="pf-flow"><span>encoder</span><i></i><span>960-d vector</span><i></i><span>frozen LLM</span><i></i><span>activity</span></div></div>
+          </article>
+
+          <article class="pf-project pf-reveal">
+            <div class="pf-project-copy">
+              <p class="pf-index">03 / AI product engineering</p><h3>Adaptive Study Planner</h3>
+              <p class="pf-summary">A deployed student workflow that extracts deadlines from syllabus PDFs, accepts natural-language tasks, and turns workload plus check-ins into a useful schedule.</p>
+              <ul><li><b>Multimodal syllabus parsing</b> reduces repetitive course setup</li><li><b>Natural-language planning</b> connects an assistant to real task operations</li><li><b>Full-term workflow</b> spans courses, calendars, check-ins, and bulk edits</li><li><b>Deployed stack</b> across Vercel, Railway, FastAPI, React, and PostgreSQL</li></ul>
+              <div class="pf-tags"><span>React</span><span>FastAPI</span><span>PostgreSQL</span><span>Llama 3.3</span></div>
+              <div class="pf-link-row"><a class="pf-project-link" href="https://study-planner-6pe5.vercel.app/?demo=1" target="_blank" rel="noreferrer">Open live demo ↗</a><a href="https://github.com/LynnFang00/study-planner" target="_blank" rel="noreferrer">View code</a></div>
+            </div>
+            <div class="pf-visual pf-planner-visual">
+              <div class="pf-shot-stage"><a href="https://study-planner-6pe5.vercel.app/?demo=1" target="_blank" rel="noreferrer" aria-label="Open the live Study Planner demo"><img id="planner-shot" src="assets/screenshots/study-planner-upcoming.png" alt="Study Planner upcoming-tasks dashboard with a populated CS and ML workload"></a></div>
+              <div class="pf-shot-tabs" role="group" aria-label="Study Planner screenshots">
+                <button type="button" class="pf-shot-tab" data-src="assets/screenshots/study-planner-upcoming.png" data-alt="Study Planner upcoming-tasks dashboard with a populated CS and ML workload" aria-pressed="true">Tasks</button>
+                <button type="button" class="pf-shot-tab" data-src="assets/screenshots/study-planner-grades.png" data-alt="Study Planner grades dashboard with course averages and assessment results" aria-pressed="false">Grades</button>
+                <button type="button" class="pf-shot-tab" data-src="assets/screenshots/study-planner-ai-assistant.png" data-alt="Study Planner AI assistant turning deadlines into a focused study plan" aria-pressed="false">AI assistant</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="pf-research pf-reveal"><b>04</b><div><p class="pf-index">Research experience</p><h3>Matter Lab</h3><p>I support structured experimentation around sample-efficient optimization and AI-agent workflows, using Bayesian optimization, scientific Python, evaluation scripts, and experiment tracking to make results easier to compare and trust.</p></div><aside><span>Bayesian optimization</span><span>AI-agent evaluation</span><span>Scientific computing</span><span>Experiment design</span></aside></article>
+        </div>
+
+        <div class="pf-earlier pf-reveal"><header><p>Earlier explorations</p><span>Projects that taught me to reason about systems before the ML products got larger.</span></header><div><article><small>Java · six-person team</small><h3>Undefined Game Engine</h3><p>Modular architecture, transform systems, scoped variables, refactoring, and code review.</p></article><article><small>Python · graph analysis</small><h3>Movie Connections</h3><p>Interactive exploration of movie graphs with NetworkX, Pandas, and custom structures.</p></article><article><small>Python · adversarial search</small><h3>Connect Five Agent</h3><p>A maintainable game with search-based opponent behavior and complete game logic.</p><a href="https://github.com/LynnFang00/Connect-Five-w-AI-Agent" target="_blank" rel="noreferrer">Repository ↗</a></article></div></div>
+      </section>
+
+      <section class="pf-section pf-approach" id="approach"><div class="pf-shell"><header class="pf-section-head pf-reveal"><div><p>How I work</p><h2>Curiosity with guardrails.</h2></div><span>I like ambitious systems. I like them more when evaluation can tell us whether the extra machinery is helping.</span></header><div class="pf-approach-grid"><article class="pf-reveal"><b>01</b><h3>Start with the question</h3><p>Define the decision an experiment needs to support before reaching for a model.</p></article><article class="pf-reveal"><b>02</b><h3>Build the comparison</h3><p>Baselines, held-out data, controls, and failure checks matter as much as architecture.</p></article><article class="pf-reveal"><b>03</b><h3>Finish the product loop</h3><p>APIs, schemas, interfaces, tests, deployment, and documentation make the idea usable.</p></article><article class="pf-reveal"><b>04</b><h3>Say what it means</h3><p>A useful negative result beats an inflated claim. Tradeoffs are part of the output.</p></article></div></div></section>
+
+      <section class="pf-shell pf-section pf-about" id="about"><div class="pf-about-photo pf-reveal"><img src="assets/violin-photo.jpg" alt="Yanlin Fang holding her violin after a performance" width="1920" height="1280" loading="lazy"><strong>Beyond the screen · I play violin.</strong></div><div class="pf-about-copy pf-reveal"><p class="pf-index">A little more of me</p><h2>I care about the craft—and the people using it.</h2><p>I&apos;m happiest moving between levels of a problem: why a model behaves the way it does, how an API should expose it, and whether the interface makes the capability understandable.</p><p>I&apos;m drawn to recommender systems, retrieval and ranking, multimodal interfaces, and tools that reduce cognitive overhead without hiding the tradeoffs.</p><p>Away from the laptop, I play violin, go to the gym, watch a lot of movies, listen to music, and enjoy meeting people who are excited about what they&apos;re building.</p><div class="pf-personal"><span>Violin</span><span>Movies</span><span>Music</span><span>Training</span><span>Good conversations</span></div></div></section>
+
+      <section class="pf-section pf-capabilities"><div class="pf-shell"><header class="pf-section-head pf-reveal"><div><p>Capabilities</p><h2>The tools follow the problem.</h2></div><span>A practical toolkit built through shipped products, research, coursework, and experiments.</span></header><div class="pf-cap-grid"><article><p>ML systems</p><h3>Retrieval, ranking &amp; evaluation</h3><span>PyTorch · scikit-learn · Transformers · FAISS · BM25 · experiment design</span></article><article><p>Backend &amp; data</p><h3>Reliable product foundations</h3><span>Python · FastAPI · PostgreSQL · SQLAlchemy · REST APIs · data pipelines</span></article><article><p>Product engineering</p><h3>Interfaces for complex workflows</h3><span>React · TypeScript · JavaScript · HTML · CSS · human-centered design</span></article><article><p>Engineering practice</p><h3>Evidence that survives the demo</h3><span>pytest · Git · Docker · CI/CD · Vercel · Railway · technical writing</span></article></div></div></section>
+
+      <section class="pf-contact" id="contact"><div class="pf-shell pf-reveal"><p>Let&apos;s talk</p><h2>Have a hard problem or an interesting idea?</h2><span>I&apos;m always happy to talk about AI products, research systems, movies, music, or whatever you&apos;re excited to build next.</span><div><a class="pf-button pf-primary" href="mailto:lynnfang00@gmail.com">Send me an email</a><a href="https://www.linkedin.com/in/yanlin-fang" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="https://github.com/LynnFang00" target="_blank" rel="noreferrer">GitHub ↗</a></div></div></section>
     </main>
 
-    <footer class="site-footer">
-      <div class="site-shell">Lynn &copy; 2026</div>
-    </footer>
+    <footer class="pf-footer"><div class="pf-shell"><p>Designed and built by Yanlin (Lynn) Fang.</p><p>Toronto · <span id="current-year">2026</span></p></div></footer>
   </body>
 </html>
